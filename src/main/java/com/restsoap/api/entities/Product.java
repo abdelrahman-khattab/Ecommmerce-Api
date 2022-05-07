@@ -14,6 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,7 +24,7 @@ import java.util.Set;
 @XmlRootElement
 @Entity
 @Table(name = "product", catalog = "rest_soap")
-public class Product implements java.io.Serializable {
+public class Product implements Serializable {
 
     private Integer id;
     private Category category;
@@ -69,7 +70,7 @@ public class Product implements java.io.Serializable {
         this.id = id;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id", nullable = false)
     public Category getCategory() {
         return this.category;
@@ -115,7 +116,7 @@ public class Product implements java.io.Serializable {
         this.price = price;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "product")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "product")
     public Set<Cart> getCarts() {
         return this.carts;
     }
@@ -126,7 +127,7 @@ public class Product implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return "Product [carts=" + carts + ", category=" + category + ", id=" + id + ", name=" + name + ", price="
+        return "Product [carts=" + carts + ", id=" + id + ", name=" + name + ", price="
                 + price + ", quantity=" + quantity + ", state=" + state + "]";
     }
 

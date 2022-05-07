@@ -50,6 +50,7 @@ public class ProductImpl implements ProductInt {
     @Override
     public void addProduct(Product product) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
+        product.setCategory(new CategoryImpl().getCategory(product.getCategory().getId()));
         entityManager.getTransaction().begin();
         entityManager.persist(product);
         entityManager.getTransaction().commit();

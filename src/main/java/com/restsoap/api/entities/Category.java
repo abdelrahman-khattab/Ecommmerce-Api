@@ -56,13 +56,18 @@ public class Category implements java.io.Serializable {
         this.name = name;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category")
     public Set<Product> getProducts() {
         return this.products;
     }
 
     public void setProducts(Set<Product> products) {
         this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return "Category [id=" + id + ", name=" + name + "]";
     }
 
 }

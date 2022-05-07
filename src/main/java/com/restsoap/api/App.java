@@ -17,14 +17,16 @@ public class App {
         CategoryInt categoryInt = new CategoryImpl();
         UserInt userInt = new UserImpl();
         // Product product = new Product(categoryInt.getCategory(1), "Ball", "5",
-        //         "in-stock", 150.0);
+        // "in-stock", 150.0);
         // productInt.addProduct(product);
         // Product product = productInt.getProduct(1);
         // product.setName("tennis ball");
         // product = productInt.updateProduct(product);
+        System.out.println(productInt.getAllProducts());
+        System.out.println(productInt.getProduct(1));
 
-            // User user = new User("email@email.com");
-            // userInt.addUser(user);
+        // User user = new User("email@email.com");
+        System.out.println(userInt.getAllUsers());
 
         // ProductBean productBean =
         // ProductMapper.INSTANCE.productEntityToBean(product);

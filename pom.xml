@@ -139,6 +139,32 @@
       <artifactId>jackson-databind</artifactId>
       <version>2.13.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.metro</groupId>
+      <artifactId>webservices-rt</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+    <!-- JAX-WS API -->
+    <dependency>
+      <groupId>jakarta.xml.ws</groupId>
+      <artifactId>jakarta.xml.ws-api</artifactId>
+      <version>3.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+    <!-- JAX-WS Metro Implementation -->
+    <dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>3.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
 
   </dependencies>
 

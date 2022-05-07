@@ -15,7 +15,8 @@ public class CartImpl implements CartInt {
     @Override
     public List<Cart> getAllCarts() {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        List<Cart> resultList = (List<Cart>) entityManager.createQuery("FROM " + Cart.class.getSimpleName())
+        List<Cart> resultList = (List<Cart>) entityManager.createQuery("FROM " 
+                + Cart.class.getSimpleName())
                 .getResultList();
         return resultList;
     }
