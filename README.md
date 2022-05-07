@@ -2,7 +2,7 @@
 ### Built-using-JAX-RS.
 
 ## 📃 Documentation
-📧[Postman RESTful API Docs](https://documenter.getpostman.com/view/8951496/UyxdK91c)
+📧[Postman RESTful API Docs](https://documenter.getpostman.com/view/7632032/UyxdL9Jc)
 
 ## 📦 Features
 * HATEOAS
