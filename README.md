@@ -9,7 +9,7 @@
 * Custom ExceptionMappers
 * Content negotiation (support for both XML and JSON payloads and responses)
 
-## ⚙ Technologies used
+## 🖥 Technologies used
 * JAX-RS (Jersey)
 * JSON-B
 * JAX-B
@@ -17,7 +17,7 @@
 * Tomcat 10.0
 * Postman
 
- ## 🛠 Run with Maven
+ ## 🚀 Run with Maven
     **Maven**
 * Change the configuration of Tomcat in `pom.xml`. 
 * Deploy the application using the following maven command:
